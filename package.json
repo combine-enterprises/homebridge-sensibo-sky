@@ -4,7 +4,7 @@
   "version": "0.4.6",
   "repository": {
     "type": "git",
-    "url": "git://github.com/combine-enterprises/homebridge-sensibo-sky.git"
+    "url": "git://github.com/fabianoflnsp/homebridge-sensibo-sky.git"
   },
   "license": "ISC",
   "preferGlobal": true,
@@ -18,9 +18,9 @@
   },
   "dependencies": {},
   "bugs": {
-    "url": "https://github.com/combine-enterprises/homebridge-sensibo-sky/issues"
+    "url": "https://github.com/fabianoflnsp/homebridge-sensibo-sky/issues"
   },
-  "homepage": "https://github.com/combine-enterprises/homebridge-sensibo-sky#readme",
+  "homepage": "https://github.com/fabianoflnsp/homebridge-sensibo-sky#readme",
   "main": "index.js",
   "directories": {
     "lib": "lib"
