@@ -4,7 +4,7 @@
 # Installation
 
 1. Install homebridge using: npm install -g homebridge
-2. Install this plugin using: npm install -g @combine-enterprises/homebridge-sensibo-sky
+2. Install this plugin using: npm install -g fabianoflnsp/homebridge-sensibo-sky
 3. Update your configuration file. See sample config.json snippet below. 
 
 # Configuration
@@ -18,6 +18,7 @@ Full configuration
 			"platform": "SensiboSky",
 			"name": "Sensibo",
 			"apiKey": "YOUR_SENSIBO_API_ID",
+			"home": "YOUR_HOME_NAME",
 			"timeLapse": 5,
 			"ai": true,
 			"hideFan": false, 
@@ -45,6 +46,7 @@ Fields:
 * "platform": Must always be "SensiboSky" (required)
 * "name": Can be anything (required)
 * "apiKey": Sensibo API key, must be obtained from https://home.sensibo.com/me/api (required)
+* "home": Home within Sensibo app, when multiple homes are used. Leave blank for all homes. (Optional)
 * "timeLapse": Time in seconds to recycle the status from Sensibo. Too frequent will result in many timeout from sensibo server. Default is 30s. (Optional)
 * "ai": true or false. In BETA and only works for cooling. This will set the fan speed automatically to achieve the target temperature asap. This will also hide the fan since it is no longer manually controlled. If there is demands, I can work on heating too. Default is turnoff (false). (Optional)
 * "hideFan": true or false. When set to true, the fan will be fixed at high provided ai is false. The Fan control is also hidden. Default is false.

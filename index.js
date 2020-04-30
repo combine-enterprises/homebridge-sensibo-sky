@@ -20,6 +20,7 @@ function SensiboPlatform(log, config) {
 	// Load Wink Authentication From Config File
 	this.apiKey = config["apiKey"];
 	this.apiDebug = config["apiDebug"];
+	this.home = config["home"] || "*";
 	this.timeLapse = config["timeLapse"];
 	this.AI = config["ai"] || false; //default state for ai
 	this.hideHumidity = config["hideHumidity"] || false;
@@ -61,6 +62,9 @@ SensiboPlatform.prototype = {
 						var device = devices[i];
 						
 						var accessory = undefined;
+						
+						if ((that.home.localeCompare("*") != 0) && (that.home.localeCompare(device.location.name) != 0))
+							continue;
 						
 						device.AI = that.AI;
 						device.hideFan = that.hideFan // if AI is true, hideFan will be meaningless. If AI is false and hideFan is true, will make fan 100% all the time
