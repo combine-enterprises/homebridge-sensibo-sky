@@ -64,7 +64,7 @@ SensiboPlatform.prototype = {
 						var accessory = undefined;
 						
 						if ((that.home.localeCompare("*") != 0) && (that.home.localeCompare(device.location.name) != 0))
-							break;
+							continue;
 						
 						device.AI = that.AI;
 						device.hideFan = that.hideFan // if AI is true, hideFan will be meaningless. If AI is false and hideFan is true, will make fan 100% all the time
